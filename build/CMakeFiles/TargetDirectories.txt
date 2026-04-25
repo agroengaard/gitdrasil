@@ -1,0 +1,3 @@
+C:/Users/ander/Desktop/cpptest/build/CMakeFiles/main.dir
+C:/Users/ander/Desktop/cpptest/build/CMakeFiles/edit_cache.dir
+C:/Users/ander/Desktop/cpptest/build/CMakeFiles/rebuild_cache.dir
