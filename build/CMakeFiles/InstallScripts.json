@@ -1,7 +1,9 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/ander/Desktop/cpptest/build/cmake_install.cmake"
+		"C:/Repos/gitdrasil/build/cmake_install.cmake",
+		"C:/Repos/gitdrasil/build/_deps/sciplot_content-build/cmake_install.cmake",
+		"C:/Repos/gitdrasil/build/_deps/sciplot_content-build/scripts/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

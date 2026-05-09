@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/ander/Desktop/cpptest/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\ander\\Desktop\\cpptest\\main.cpp",
-  "file": "C:/Users/ander/Desktop/cpptest/main.cpp",
-  "output": "CMakeFiles/main.dir/main.cpp.obj"
-}
-]

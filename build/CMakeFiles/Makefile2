@@ -53,61 +53,169 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ander\Desktop\cpptest
+CMAKE_SOURCE_DIR = C:\Repos\gitdrasil
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ander\Desktop\cpptest\build
+CMAKE_BINARY_DIR = C:\Repos\gitdrasil\build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/Gitdrasil.dir/all
+all: _deps/sciplot_content-build/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/main.dir/codegen
+codegen: CMakeFiles/Gitdrasil.dir/codegen
+codegen: _deps/sciplot_content-build/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: _deps/sciplot_content-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/Gitdrasil.dir/clean
+clean: CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/clean
+clean: CMakeFiles/Gitdrasil_autogen.dir/clean
+clean: _deps/sciplot_content-build/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Directory level rules for directory _deps/sciplot_content-build
+
+# Recursive "all" directory target.
+_deps/sciplot_content-build/all: _deps/sciplot_content-build/scripts/all
+.PHONY : _deps/sciplot_content-build/all
+
+# Recursive "codegen" directory target.
+_deps/sciplot_content-build/codegen: _deps/sciplot_content-build/scripts/codegen
+.PHONY : _deps/sciplot_content-build/codegen
+
+# Recursive "preinstall" directory target.
+_deps/sciplot_content-build/preinstall: _deps/sciplot_content-build/scripts/preinstall
+.PHONY : _deps/sciplot_content-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/sciplot_content-build/clean: _deps/sciplot_content-build/scripts/clean
+.PHONY : _deps/sciplot_content-build/clean
+
+#=============================================================================
+# Directory level rules for directory _deps/sciplot_content-build/scripts
+
+# Recursive "all" directory target.
+_deps/sciplot_content-build/scripts/all:
+.PHONY : _deps/sciplot_content-build/scripts/all
+
+# Recursive "codegen" directory target.
+_deps/sciplot_content-build/scripts/codegen:
+.PHONY : _deps/sciplot_content-build/scripts/codegen
+
+# Recursive "preinstall" directory target.
+_deps/sciplot_content-build/scripts/preinstall:
+.PHONY : _deps/sciplot_content-build/scripts/preinstall
+
+# Recursive "clean" directory target.
+_deps/sciplot_content-build/scripts/clean:
+.PHONY : _deps/sciplot_content-build/scripts/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Gitdrasil.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ander\Desktop\cpptest\build\CMakeFiles --progress-num=1,2 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/Gitdrasil.dir/all: CMakeFiles/Gitdrasil_autogen.dir/all
+CMakeFiles/Gitdrasil.dir/all: CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Repos\gitdrasil\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Gitdrasil"
+.PHONY : CMakeFiles/Gitdrasil.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ander\Desktop\cpptest\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ander\Desktop\cpptest\build\CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+CMakeFiles/Gitdrasil.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Gitdrasil.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 0
+.PHONY : CMakeFiles/Gitdrasil.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+Gitdrasil: CMakeFiles/Gitdrasil.dir/rule
+.PHONY : Gitdrasil
 
 # codegen rule for target.
-CMakeFiles/main.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\ander\Desktop\cpptest\build\CMakeFiles --progress-num=1,2 "Finished codegen for target main"
-.PHONY : CMakeFiles/main.dir/codegen
+CMakeFiles/Gitdrasil.dir/codegen: CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Repos\gitdrasil\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target Gitdrasil"
+.PHONY : CMakeFiles/Gitdrasil.dir/codegen
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/Gitdrasil.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/clean
+.PHONY : CMakeFiles/Gitdrasil.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen_timestamp_deps.dir\build.make CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen_timestamp_deps.dir\build.make CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Repos\gitdrasil\build\CMakeFiles --progress-num= "Built target Gitdrasil_autogen_timestamp_deps"
+.PHONY : CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 0
+.PHONY : CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+Gitdrasil_autogen_timestamp_deps: CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/rule
+.PHONY : Gitdrasil_autogen_timestamp_deps
+
+# codegen rule for target.
+CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen_timestamp_deps.dir\build.make CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Repos\gitdrasil\build\CMakeFiles --progress-num= "Finished codegen for target Gitdrasil_autogen_timestamp_deps"
+.PHONY : CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen_timestamp_deps.dir\build.make CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/clean
+.PHONY : CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Gitdrasil_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/Gitdrasil_autogen.dir/all: CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen.dir\build.make CMakeFiles/Gitdrasil_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen.dir\build.make CMakeFiles/Gitdrasil_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Repos\gitdrasil\build\CMakeFiles --progress-num=8 "Built target Gitdrasil_autogen"
+.PHONY : CMakeFiles/Gitdrasil_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Gitdrasil_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Gitdrasil_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 0
+.PHONY : CMakeFiles/Gitdrasil_autogen.dir/rule
+
+# Convenience name for target.
+Gitdrasil_autogen: CMakeFiles/Gitdrasil_autogen.dir/rule
+.PHONY : Gitdrasil_autogen
+
+# codegen rule for target.
+CMakeFiles/Gitdrasil_autogen.dir/codegen: CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen.dir\build.make CMakeFiles/Gitdrasil_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Repos\gitdrasil\build\CMakeFiles --progress-num=8 "Finished codegen for target Gitdrasil_autogen"
+.PHONY : CMakeFiles/Gitdrasil_autogen.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Gitdrasil_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen.dir\build.make CMakeFiles/Gitdrasil_autogen.dir/clean
+.PHONY : CMakeFiles/Gitdrasil_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

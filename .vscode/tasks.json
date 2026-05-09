@@ -2,9 +2,33 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Build Gitdrasil",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "build"
+      ],
+      "options": {
+        "env": {
+          "PATH": "C:/msys64/mingw64/bin;${env:PATH}"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Run these Airfoils s'il vous plait",
       "type": "shell",
-      "command": "${workspaceFolder}/build/main",
+      "command": "${workspaceFolder}/build/Gitdrasil.exe",
+      "options": {
+        "env": {
+          "PATH": "C:/msys64/mingw64/bin;${env:PATH}"
+        }
+      },
       "group": {
         "kind": "test",
         "isDefault": true

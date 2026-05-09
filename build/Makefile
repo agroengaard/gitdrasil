@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ander\Desktop\cpptest
+CMAKE_SOURCE_DIR = C:\Repos\gitdrasil
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ander\Desktop\cpptest\build
+CMAKE_BINARY_DIR = C:\Repos\gitdrasil\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -84,11 +84,56 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	"C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	"C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ander\Desktop\cpptest\build\CMakeFiles C:\Users\ander\Desktop\cpptest\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles C:\Repos\gitdrasil\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\ander\Desktop\cpptest\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Repos\gitdrasil\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,24 +161,146 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named Gitdrasil
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
-.PHONY : main
+Gitdrasil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Gitdrasil
+.PHONY : Gitdrasil
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+Gitdrasil/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/build
+.PHONY : Gitdrasil/fast
+
+#=============================================================================
+# Target rules for targets named Gitdrasil_autogen_timestamp_deps
+
+# Build rule for target.
+Gitdrasil_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Gitdrasil_autogen_timestamp_deps
+.PHONY : Gitdrasil_autogen_timestamp_deps
+
+# fast build rule for target.
+Gitdrasil_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen_timestamp_deps.dir\build.make CMakeFiles/Gitdrasil_autogen_timestamp_deps.dir/build
+.PHONY : Gitdrasil_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named Gitdrasil_autogen
+
+# Build rule for target.
+Gitdrasil_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Gitdrasil_autogen
+.PHONY : Gitdrasil_autogen
+
+# fast build rule for target.
+Gitdrasil_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil_autogen.dir\build.make CMakeFiles/Gitdrasil_autogen.dir/build
+.PHONY : Gitdrasil_autogen/fast
+
+GitService.obj: GitService.cpp.obj
+.PHONY : GitService.obj
+
+# target to build an object file
+GitService.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/GitService.cpp.obj
+.PHONY : GitService.cpp.obj
+
+GitService.i: GitService.cpp.i
+.PHONY : GitService.i
+
+# target to preprocess a source file
+GitService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/GitService.cpp.i
+.PHONY : GitService.cpp.i
+
+GitService.s: GitService.cpp.s
+.PHONY : GitService.s
+
+# target to generate assembly for a file
+GitService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/GitService.cpp.s
+.PHONY : GitService.cpp.s
+
+Gitdrasil_autogen/mocs_compilation.obj: Gitdrasil_autogen/mocs_compilation.cpp.obj
+.PHONY : Gitdrasil_autogen/mocs_compilation.obj
+
+# target to build an object file
+Gitdrasil_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/Gitdrasil_autogen/mocs_compilation.cpp.obj
+.PHONY : Gitdrasil_autogen/mocs_compilation.cpp.obj
+
+Gitdrasil_autogen/mocs_compilation.i: Gitdrasil_autogen/mocs_compilation.cpp.i
+.PHONY : Gitdrasil_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Gitdrasil_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/Gitdrasil_autogen/mocs_compilation.cpp.i
+.PHONY : Gitdrasil_autogen/mocs_compilation.cpp.i
+
+Gitdrasil_autogen/mocs_compilation.s: Gitdrasil_autogen/mocs_compilation.cpp.s
+.PHONY : Gitdrasil_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Gitdrasil_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/Gitdrasil_autogen/mocs_compilation.cpp.s
+.PHONY : Gitdrasil_autogen/mocs_compilation.cpp.s
+
+MainWindow.obj: MainWindow.cpp.obj
+.PHONY : MainWindow.obj
+
+# target to build an object file
+MainWindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/MainWindow.cpp.obj
+.PHONY : MainWindow.cpp.obj
+
+MainWindow.i: MainWindow.cpp.i
+.PHONY : MainWindow.i
+
+# target to preprocess a source file
+MainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/MainWindow.cpp.i
+.PHONY : MainWindow.cpp.i
+
+MainWindow.s: MainWindow.cpp.s
+.PHONY : MainWindow.s
+
+# target to generate assembly for a file
+MainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/MainWindow.cpp.s
+.PHONY : MainWindow.cpp.s
+
+OcctViewerWidget.obj: OcctViewerWidget.cpp.obj
+.PHONY : OcctViewerWidget.obj
+
+# target to build an object file
+OcctViewerWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/OcctViewerWidget.cpp.obj
+.PHONY : OcctViewerWidget.cpp.obj
+
+OcctViewerWidget.i: OcctViewerWidget.cpp.i
+.PHONY : OcctViewerWidget.i
+
+# target to preprocess a source file
+OcctViewerWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/OcctViewerWidget.cpp.i
+.PHONY : OcctViewerWidget.cpp.i
+
+OcctViewerWidget.s: OcctViewerWidget.cpp.s
+.PHONY : OcctViewerWidget.s
+
+# target to generate assembly for a file
+OcctViewerWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/OcctViewerWidget.cpp.s
+.PHONY : OcctViewerWidget.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -141,7 +308,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -149,7 +316,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -159,8 +326,26 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... main
+	@echo ... Gitdrasil_autogen
+	@echo ... Gitdrasil_autogen_timestamp_deps
+	@echo ... Gitdrasil
+	@echo ... GitService.obj
+	@echo ... GitService.i
+	@echo ... GitService.s
+	@echo ... Gitdrasil_autogen/mocs_compilation.obj
+	@echo ... Gitdrasil_autogen/mocs_compilation.i
+	@echo ... Gitdrasil_autogen/mocs_compilation.s
+	@echo ... MainWindow.obj
+	@echo ... MainWindow.i
+	@echo ... MainWindow.s
+	@echo ... OcctViewerWidget.obj
+	@echo ... OcctViewerWidget.i
+	@echo ... OcctViewerWidget.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
