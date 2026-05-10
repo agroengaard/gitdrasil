@@ -295,6 +295,30 @@ OcctViewerWidget.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/OcctViewerWidget.cpp.s
 .PHONY : OcctViewerWidget.cpp.s
 
+foils.obj: foils.cpp.obj
+.PHONY : foils.obj
+
+# target to build an object file
+foils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/foils.cpp.obj
+.PHONY : foils.cpp.obj
+
+foils.i: foils.cpp.i
+.PHONY : foils.i
+
+# target to preprocess a source file
+foils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/foils.cpp.i
+.PHONY : foils.cpp.i
+
+foils.s: foils.cpp.s
+.PHONY : foils.s
+
+# target to generate assembly for a file
+foils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Gitdrasil.dir\build.make CMakeFiles/Gitdrasil.dir/foils.cpp.s
+.PHONY : foils.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -346,6 +370,9 @@ help:
 	@echo ... OcctViewerWidget.obj
 	@echo ... OcctViewerWidget.i
 	@echo ... OcctViewerWidget.s
+	@echo ... foils.obj
+	@echo ... foils.i
+	@echo ... foils.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

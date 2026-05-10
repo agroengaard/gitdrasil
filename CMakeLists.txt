@@ -35,6 +35,7 @@ add_executable(Gitdrasil
     MainWindow.cpp
     GitService.cpp
     OcctViewerWidget.cpp
+    foils.cpp
 )
 
 target_include_directories(Gitdrasil PRIVATE ${OpenCASCADE_INCLUDE_DIR})
